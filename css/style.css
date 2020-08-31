@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background-image: radial-gradient(circle, rgba(251,177,63,0.9441128848643785) 0%, rgba(252,85,70,0.9581578286846032) 100%);;
+}
+
+.wrapper {
+    width: 440px;
+    background-color: white;
+    box-shadow: 0 0 10px #000;
+}
+
+form {
+    padding: 40px;
+    font-size: 20px;
+}
+
+h1 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-box {
+    margin-bottom: 15px;
+}
+
+.form-box label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.form-box input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: 7px;
+}
+
+.form-box.error input {
+    border: 1px solid rgb(224, 73, 73);
+    background-color: rgb(224, 73, 73, .1);
+}
+
+.form-box .error-text {
+    margin: 5px 0 0 10px;
+    font-size: 14px;
+    color: rgb(224, 73, 73);
+    visibility: hidden;
+}
+
+.form-box.error .error-text {
+    visibility: visible;
+}
+
+.control-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.send, .clear, .close {
+    display: block;
+    width: 100px;
+    padding: 10px 0;
+    margin-left: 10px;
+    font-size: 17px;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color .3s;
+} 
+
+.send, .close {
+    background-color: rgb(0, 148, 255);
+}
+
+.clear {
+    background-color: rgb(224, 73, 73);
+}
+
+.send:hover, .close:hover{
+    background-color: rgb(0, 107, 194);
+}
+
+.clear:hover{
+    background-color: rgb(173, 49, 49);
+}
+
+
+.popup {
+    position: absolute;
+    width: 600px;
+    height: 200px;
+    top: -300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 3px solid black;
+    transition: top .5s;
+}
+
+.popup p {
+    font-size: 28px;
+    text-align: center;
+}
+
+.popup .close {
+    margin-top: 20px;
+}
+
+.show-popup {
+    top: 150px;
+}
+
+
+
